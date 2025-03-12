@@ -1,0 +1,31 @@
+@using CostDashboard.Models
+@using System
+
+<div class="header">
+    <div class="header-content">
+        <div class="title-section">
+            <h1 class="title">Cloud Cost Dashboard</h1>
+            <p class="subtitle">Track and analyze your cloud spending</p>
+        </div>
+        
+        <div class="date-range-picker">
+            <TelerikDateRangePicker @bind-StartValue="DateRange.Start" 
+                                   @bind-EndValue="DateRange.End"
+                                   Width="300px">
+            </TelerikDateRangePicker>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public DateRange DateRange { get; set; } = new();
+    
+    [Parameter]
+    public EventCallback<DateRange> DateRangeChanged { get; set; }
+    
+    private async Task OnDateRangeChange()
+    {
+        await DateRangeChanged.InvokeAsync(DateRange);
+    }
+}

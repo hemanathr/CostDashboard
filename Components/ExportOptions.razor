@@ -1,0 +1,34 @@
+@inject IJSRuntime JSRuntime
+
+<div class="export-options">
+    <h3>Export Options</h3>
+    
+    <div class="export-buttons">
+        <TelerikButton ThemeColor="primary" OnClick="@(() => ExportData("pdf"))">
+            <span class="k-icon k-i-file-pdf"></span>
+            Export as PDF
+        </TelerikButton>
+        
+        <TelerikButton ThemeColor="primary" OnClick="@(() => ExportData("excel"))">
+            <span class="k-icon k-i-file-excel"></span>
+            Export as Excel
+        </TelerikButton>
+        
+        <TelerikButton ThemeColor="primary" OnClick="@(() => ExportData("csv"))">
+            <span class="k-icon k-i-file-csv"></span>
+            Export as CSV
+        </TelerikButton>
+    </div>
+</div>
+
+@code {
+    private async Task ExportData(string format)
+    {
+        // In a real app, this would trigger the export functionality
+        // For now, we'll just show an alert
+        await JSRuntime.InvokeVoidAsync("alert", $"Exporting as {format.ToUpper()}...");
+        
+        // The actual export would typically be handled by a service that
+        // would generate the file and trigger a download
+    }
+}

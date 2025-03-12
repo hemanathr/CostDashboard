@@ -1,0 +1,91 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CostDashboard
+build_property.RootNamespace = CostDashboard
+build_property.ProjectDir = C:\Users\Testing_vault\CostDashboard\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Testing_vault\CostDashboard
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Testing_vault/CostDashboard/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/Charts/CostDistribution.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGFydHNcQ29zdERpc3RyaWJ1dGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/Charts/CostTrends.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGFydHNcQ29zdFRyZW5kcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/Charts/ServiceComparison.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGFydHNcU2VydmljZUNvbXBhcmlzb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/CostBreakdownTable.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb3N0QnJlYWtkb3duVGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/ExportOptions.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xFeHBvcnRPcHRpb25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/FilterBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWx0ZXJCYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Components/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-nmm9zy7pjg
+
+[C:/Users/Testing_vault/CostDashboard/CostDashboard/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29zdERhc2hib2FyZFxMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1fhr4rboon

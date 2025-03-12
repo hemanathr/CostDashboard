@@ -1,0 +1,62 @@
+@using CostDashboard.Models
+
+<div class="filter-bar">
+    <div class="filter-controls">
+        <div class="filter-control">
+            <label>Region</label>
+            <TelerikDropDownList Data="@regions"
+                               @bind-Value="Filters.Region"
+                               Width="200px"
+                               OnChange="@OnFiltersChanged">
+            </TelerikDropDownList>
+        </div>
+        
+        <div class="filter-control">
+            <label>Service Type</label>
+            <TelerikDropDownList Data="@serviceTypes"
+                               @bind-Value="Filters.ServiceType"
+                               Width="200px"
+                               OnChange="@OnFiltersChanged">
+            </TelerikDropDownList>
+        </div>
+        
+        <div class="filter-control">
+            <label>Account</label>
+            <TelerikDropDownList Data="@accounts"
+                               @bind-Value="Filters.Account"
+                               Width="200px"
+                               OnChange="@OnFiltersChanged">
+            </TelerikDropDownList>
+        </div>
+        
+        <TelerikButton ThemeColor="primary" OnClick="@ResetFilters">
+            Reset Filters
+        </TelerikButton>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Filters Filters { get; set; } = new();
+    
+    [Parameter]
+    public EventCallback<Filters> FiltersChanged { get; set; }
+
+    // These would typically come from a service in a real app
+    private List<string> regions = new() { "all", "us-east-1", "us-west-2", "eu-west-1", "ap-southeast-1" };
+    private List<string> serviceTypes = new() { "all", "EC2", "S3", "RDS", "Lambda", "CloudFront" };
+    private List<string> accounts = new() { "all", "Production", "Development", "Testing", "Staging" };
+
+    private async Task OnFiltersChanged()
+    {
+        await FiltersChanged.InvokeAsync(Filters);
+    }
+    
+    private async Task ResetFilters()
+    {
+        Filters.Region = "all";
+        Filters.ServiceType = "all";
+        Filters.Account = "all";
+        await FiltersChanged.InvokeAsync(Filters);
+    }
+}

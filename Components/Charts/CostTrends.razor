@@ -1,0 +1,78 @@
+@using CostDashboard.Models
+@using CostDashboard.Services
+@inject CostDataService DataService
+
+<div class="chart-card">
+    <div class="chart-header">
+        <h3>Cost Trends</h3>
+    </div>
+    
+    <div class="chart-content">
+        <TelerikChart>
+            <ChartSeriesItems>
+                <ChartLineSeries Data="@costTrends"
+                                Field="@nameof(TimeSeriesItem.Value)"
+                                CategoryField="@nameof(TimeSeriesItem.Date)"
+                                Name="Total Cost">
+                    <ChartSeriesMarkers Visible="true"></ChartSeriesMarkers>
+                    <ChartSeriesTooltip Visible="true"></ChartSeriesTooltip>
+                </ChartLineSeries>
+            </ChartSeriesItems>
+            
+            <ChartCategoryAxes>
+                <ChartCategoryAxis BaseUnit="@ChartCategoryAxisBaseUnit.Months" 
+                                  Format="{0:MMM yyyy}">
+                </ChartCategoryAxis>
+            </ChartCategoryAxes>
+            
+            <ChartValueAxes>
+                <ChartValueAxis>
+                    <ChartValueAxisLabels Format="${0}"></ChartValueAxisLabels>
+                </ChartValueAxis>
+            </ChartValueAxes>
+            
+            <ChartTitle Text="Monthly Cost Trends"></ChartTitle>
+            
+            <ChartLegend Position="ChartLegendPosition.Bottom">
+            </ChartLegend>
+        </TelerikChart>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Filters Filters { get; set; } = new();
+    
+    [Parameter]
+    public DateRange DateRange { get; set; } = new();
+    
+    private List<TimeSeriesItem> costTrends = new();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+    
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadData();
+    }
+    
+    private async Task LoadData()
+    {
+        // In a real app, this would filter based on the filters and date range
+        var rawData = await DataService.GetCostTrendsData(Filters, DateRange);
+        
+        costTrends = rawData.Select(item => new TimeSeriesItem
+        {
+            Date = item.Date,
+            Value = item.Amount
+        }).ToList();
+    }
+    
+    public class TimeSeriesItem
+    {
+        public DateTime Date { get; set; }
+        public decimal Value { get; set; }
+    }
+}

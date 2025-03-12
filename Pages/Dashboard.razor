@@ -1,0 +1,36 @@
+@page "/"
+@using System
+
+<div class="dashboard-container">
+    <Header @bind-DateRange="dateRange" />
+    
+    <div class="content-container">
+        <FilterBar @bind-Filters="filters" />
+        
+        <div class="charts-container">
+            <CostDistribution Filters="filters" DateRange="dateRange" />
+            <CostTrends Filters="filters" DateRange="dateRange" />
+            <ServiceComparison Filters="filters" DateRange="dateRange" />
+        </div>
+        
+        <CostBreakdownTable Filters="filters" DateRange="dateRange" />
+        <ExportOptions />
+    </div>
+</div>
+
+@code {
+    private DateRange dateRange = new DateRange 
+    { 
+        Start = new DateTime(2023, 1, 1), 
+        End = DateTime.Now 
+    };
+    
+    private Filters filters = new Filters
+    {
+        Region = "all",
+        ServiceType = "all",
+        Account = "all"
+    };
+    
+    // Additional page logic
+}

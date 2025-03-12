@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "tNT+u2F1Z+hKlZ4Oi3z6VymutOL60e0/WXyPyIHN7H0Jp0+STf0460aWF3j65/lrnLMId/Hh/T4xXDb1kNZnPg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Testing_vault\\CostDashboard\\CostDashboard.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Telerik.UI.for.Blazor. No packages exist with this id in source(s): nuget.org",
+      "libraryId": "Telerik.UI.for.Blazor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
